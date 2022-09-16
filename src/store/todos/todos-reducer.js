@@ -6,6 +6,8 @@ import {
     CHANGE_TODO,
 } from './todos-const';
 
+let id = 0;
+
 export const todos = (state = [], action) => {
     switch (action.type) {
         case ADD_TODO: {
@@ -13,7 +15,7 @@ export const todos = (state = [], action) => {
                 return [
                     ...state,
                     {
-                        id: Date.now(),
+                        id: id++,
                         title: action.title,
                         completed: false,
                     },

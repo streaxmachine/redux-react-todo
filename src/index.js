@@ -1,11 +1,10 @@
-import ReactDOM from "react-dom";
-import { cofigureStore } from "./store";
-import {Root} from "./Root";
+import ReactDOM from 'react-dom/client';
+import { cofigureStore } from './store';
+import { Root } from './Root';
+import React from 'react';
 
 const store = cofigureStore();
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <Root store={store} />,
-  rootElement
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <Root store={store} />
 );

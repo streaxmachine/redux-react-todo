@@ -40,6 +40,16 @@ body {
   padding-top: 50px;
 }
 
+.canvas-container{
+  width: 100%;
+  height: 100vh;
+}
+
+.container-root{
+  width: 100%;
+  height: 100vh;
+}
+
 .todo-list {
     display: flex;
     -ms-flex-direction: column;

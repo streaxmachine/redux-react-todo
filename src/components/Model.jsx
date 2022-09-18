@@ -3,6 +3,7 @@ import { TodoList } from './TodoList';
 
 export function Model(props) {
     const { nodes, materials } = useGLTF('/Laptop.glb');
+    console.log(props.children);
     return (
         <group {...props} dispose={null}>
             <mesh
@@ -41,19 +42,7 @@ export function Model(props) {
                 // geometry={nodes.Screen.geometry}
                 // material={materials.Screen}
             >
-                <Html
-                    occlude
-                    transform
-                    position={[0, 12.851, -5.38]}
-                    style={{
-                        width: '914px',
-                        height: '652px',
-                    }}
-                >
-                    <div className='container-app'>
-                        {/* Здесь хочу использовать <TodoList /> */}
-                    </div>
-                </Html>
+                {props.children}
             </mesh>
             <mesh
                 castShadow
